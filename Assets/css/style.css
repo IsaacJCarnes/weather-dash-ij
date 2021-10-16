@@ -75,6 +75,14 @@ header h1{
     width: 95%;
 }
 
+#infoName{
+    display:flex;
+}
+
+#icon{
+    display: flex;
+}
+
 #currentInfo{
     border: 1px solid black;
     margin: 2%;

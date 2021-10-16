@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="Assets\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" defer></script>
     <script src="Assets\js\main.js" defer></script>
+
 </head>
 <body>
     <header><h1>Weather Dashboard</h1></header>
@@ -19,8 +21,11 @@
         </section>
         <aside class="verticalAlignment">
             <section id="currentInfo">
-                <h1 id="infoName">Current City</h1>
-                <div id="infoText">Temp:</div>
+                <div class="horizontalAlignment">
+                    <h1 id="infoName">Current City</h1>
+                    <img id="icon" src="" alt="Weather Icon">
+                </div>
+                <div id="infoTemp">Temp:</div>
                 <div id="infoWind">Wind:</div>
                 <div id="infoHumid">Humidity:</div>
                 <div id="infoUV">UV Index:</div>
