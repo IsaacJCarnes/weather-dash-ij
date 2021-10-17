@@ -59,7 +59,7 @@ function addToHistory(cityName){ //Add city to history if not already in it
 }
 
 function getCity(city){
-    var queryURL = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=` + city + `&units=imperial&appid=` + apiKey;
+    var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=` + city + `&units=imperial&appid=` + apiKey;
     fetch(queryURL)
     .then(function(resp) { 
         if(resp.status === 400 || resp.status === 404){
@@ -82,13 +82,13 @@ function getCity(city){
 
 function addCity(city){ //Displays city
     infoName.textContent = city.name + " " + moment().format("L"); //Heading for current day
-    weatherIcon.setAttribute("src", `https://crossorigin.me/http://openweathermap.org/img/w/` + city.weather[0].icon + `.png`); //Weather icon
+    weatherIcon.setAttribute("src", `http://openweathermap.org/img/w/` + city.weather[0].icon + `.png`); //Weather icon
     infoTemp.textContent = "Temp: " + city.main.temp + "°F"; //Temp from K to F
     infoWind.textContent = "Wind: " + city.wind.speed + "MPH"; //Wind speed
     infoHumid.textContent = "Humidity: " + city.main.humidity + " %"; //Humidity
     let lat = city.coord.lat; //Lat for UV and more data
     let lon = city.coord.lon; //Lon for UV and more data
-    let moreData = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/onecall?lat=`+lat+`&lon=`+lon+`&units=imperial&appid=`+apiKey; //more data key
+    let moreData = `http://api.openweathermap.org/data/2.5/onecall?lat=`+lat+`&lon=`+lon+`&units=imperial&appid=`+apiKey; //more data key
     fetch(moreData)
     .then(function (response) {
       return response.json();
@@ -111,7 +111,7 @@ function addCity(city){ //Displays city
             let dayIcon = document.createElement("img"); //Day icon
             dayIcon.style.width = "40px"; 
             dayIcon.style.height = "40px";
-            dayIcon.setAttribute("src", `https://crossorigin.me/http://openweathermap.org/img/w/` + weekDay.weather[0].icon + `.png`);
+            dayIcon.setAttribute("src", `http://openweathermap.org/img/w/` + weekDay.weather[0].icon + `.png`);
             let dayTemp = document.createElement("p");
             dayTemp.textContent = "Temp: " + weekDay.temp.day + "°F";
             let dayWind = document.createElement("p");
