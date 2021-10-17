@@ -1,6 +1,7 @@
 const submitText = document.getElementById("submitText");
 const submitButton = document.getElementById("submitButton");
 const searchHistory = document.getElementById("searchHistory");
+//Info Variables
 const currentInfo = document.getElementById("currentInfo");
 const infoName = document.getElementById("infoName");
 const weatherIcon = document.getElementById("icon");
@@ -8,11 +9,12 @@ const infoTemp = document.getElementById("infoTemp");
 const infoWind = document.getElementById("infoWind");
 const infoHumid = document.getElementById("infoHumid");
 const infoUV = document.getElementById("infoUV");
+//Five day forecast section
 const fiveForecast = document.getElementById("fiveForecast");
 const fiveDayInfo = document.getElementById("fiveDayInfo");
 
-var currentTime = moment();
-const apiKey = "d70ef8022f47b07da7d017d3bf99f53b";
+var currentTime = moment(); //CURRENT TIME
+const apiKey = "d70ef8022f47b07da7d017d3bf99f53b"; //API KEY
 
 let cityHistory = [];
 if (localStorage.getItem("cityHistory") != null) {
