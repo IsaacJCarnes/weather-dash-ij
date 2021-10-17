@@ -39,7 +39,6 @@ header h1{
     padding-left: 1%;
     width: 25%;
     height: fit-content;
-    border: 1px solid black;
 }
 
 #searchArea h2{
@@ -53,7 +52,6 @@ header h1{
     display: flex;
     margin:3%;
     justify-content: center;
-
 }
 
 #submitButton{
@@ -75,8 +73,21 @@ header h1{
     width: 95%;
 }
 
+#searchHistory button{
+    width: 75%;
+    display: flex;
+    position: relative;
+    left: 12.5%;
+    margin:2%;
+}
+
 #infoName{
+    font-size: 20px;
     display:flex;
+}
+
+#infoUV{
+    width:fit-content;
 }
 
 #icon{
@@ -84,10 +95,42 @@ header h1{
 }
 
 #currentInfo{
+    display: none;
     border: 1px solid black;
     margin: 2%;
 }
 
-#fiveDayInfo{
-    border-top: 1px solid black;
+#currentInfo div{
+    padding: 1%;
+}
+
+#fiveForecast{
+    display: none;
+}
+
+#fiveDayInfo div{
+    background-color: darkblue;
+    color: white;
+    padding: 1%;
+    margin: 1%;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fiveDayInfo div div{
+    width: fit-content;
+}
+
+.goodUV{
+    background-color: lightgreen;
+}
+
+.moderateUV{
+    background-color: orange;
+}
+
+.badUV{
+    background-color: red;
 }
